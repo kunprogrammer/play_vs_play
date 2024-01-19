@@ -60,21 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ],
-
-<<<<<<< HEAD
-=======
-                  }),
-                   SizedBox(height: 10.0),
-                  SignInButton(
-                    buttonType: ButtonType.facebook,
-                    btnText: 'Đăng nhập bằng Facebook',
-                    onPressed: () {
-
-                    }),
-                  ],
->>>>>>> 04a500e00390f9519de8be86104a90e3bfb78d0e
                   ),
-
                 ),
               ),
             ),
