@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:play_vs_play/bloc/Auth/login_bloc.dart';
 import 'package:sign_button/sign_button.dart';
@@ -9,7 +10,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   @override
- Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
@@ -23,37 +24,45 @@ class _LoginScreenState extends State<LoginScreen> {
           // Login form
           Center(
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(30.0),
               child: Card(
-                elevation: 8.0,
+                elevation: 10.0,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(30.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
+                      SizedBox(
+                          height: 50.0,
+                          width: 130.0,
+                          child: Image.asset(
+                            'assets/logo.png',
+                          )),
+                      SizedBox(height: 15.0),
+                      SignInButton(
+                          buttonType: ButtonType.google, onPressed: () {}),
+                      SizedBox(height: 15.0),
+                      SignInButton(
+                          buttonType: ButtonType.facebook, onPressed: () {}),
+                      SizedBox(height: 15.0),
+                      SignInButton(
+                          buttonType: ButtonType.apple, onPressed: () {}),
+                      SizedBox(height: 15.0),
+                      SignInButton(
+                          buttonType: ButtonType.twitter, onPressed: () {}),
+                      SizedBox(height: 15.0),
                       Text(
-                        'Play Vs Play',
+                        'Verision: 1.0.0',
                         style: TextStyle(
-                          fontSize: 24.0,
+                          color: Colors.black,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 25.0),
-                     SignInButton(
-                      buttonType: ButtonType.google,
-                      btnText: 'Đăng nhập bằng Google',
-                      onPressed: () {
+                    ],
 
-                  }),
-                   SignInButton(
-                      buttonType: ButtonType.facebook,
-                      btnText: 'Đăng nhập bằng Facebook',
-                      onPressed: () {
-                      }
-                      ),
-  
-                  ],
                   ),
+
                 ),
               ),
             ),
