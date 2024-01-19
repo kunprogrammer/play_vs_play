@@ -45,13 +45,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {
 
                   }),
-                   SignInButton(
-                      buttonType: ButtonType.facebook,
-                      btnText: 'Đăng nhập bằng Facebook',
-                      onPressed: () {
-                      }
-                      ),
-  
+                   SizedBox(height: 10.0),
+                  SignInButton(
+                    buttonType: ButtonType.facebook,
+                    btnText: 'Đăng nhập bằng Facebook',
+                    onPressed: () {
+
+                    }),
                   ],
                   ),
                 ),
