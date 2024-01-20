@@ -13,7 +13,6 @@ class LoginLoading extends LoginState {}
 
 class LoginSuccess extends LoginState {
   final String userId;
-
   const LoginSuccess(this.userId);
 
   @override

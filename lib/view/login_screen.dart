@@ -1,5 +1,5 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:play_vs_play/bloc/Auth/login_bloc.dart';
 import 'package:sign_button/sign_button.dart';
 
@@ -40,16 +40,32 @@ class _LoginScreenState extends State<LoginScreen> {
                           )),
                       SizedBox(height: 15.0),
                       SignInButton(
-                          buttonType: ButtonType.google, onPressed: () {}),
+                          buttonType: ButtonType.google,
+                          onPressed: () {
+                            BlocProvider.of<LoginBloc>(context)
+                                .add(SignInGoogleEvnet());
+                          }),
                       SizedBox(height: 15.0),
                       SignInButton(
-                          buttonType: ButtonType.facebook, onPressed: () {}),
+                          buttonType: ButtonType.facebook,
+                          onPressed: () {
+                            BlocProvider.of<LoginBloc>(context)
+                                .add(SignInFacebookEvnet());
+                          }),
                       SizedBox(height: 15.0),
                       SignInButton(
-                          buttonType: ButtonType.apple, onPressed: () {}),
+                          buttonType: ButtonType.apple,
+                          onPressed: () {
+                            BlocProvider.of<LoginBloc>(context)
+                                .add(SignInAppleeEvnet());
+                          }),
                       SizedBox(height: 15.0),
                       SignInButton(
-                          buttonType: ButtonType.twitter, onPressed: () {}),
+                          buttonType: ButtonType.instagram,
+                          onPressed: () {
+                            BlocProvider.of<LoginBloc>(context)
+                                .add(SignInInstagramEvnet());
+                          }),
                       SizedBox(height: 15.0),
                       Text(
                         'Verision: 1.0.0',

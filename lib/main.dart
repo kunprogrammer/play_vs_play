@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_vs_play/view/home_screen.dart';
 import 'package:play_vs_play/view/login_screen.dart';
 // import 'package:play_vs_play/core/app.dart';
 
@@ -14,7 +15,7 @@ class AppHome extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  LoginScreen(),
+      home:  HomePage(),
     );
   }
 }
